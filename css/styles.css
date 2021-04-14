@@ -779,7 +779,11 @@ footer li:last-child {
   border-radius: 4px;
 }
 
-.form-field textarea::placeholder {
+.form-field__textarea {
+  height: 120px;
+  padding: 12px 16px;
+}
+.form-field__textarea::placeholder {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -789,7 +793,7 @@ footer li:last-child {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field textarea {
+.form-field__textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
