@@ -713,7 +713,7 @@ footer li:last-child {
   justify-content: center;
 }
 
-.modal-close-icon {
+.modal-close__icon {
   width: 11px;
   height: 11px;
 
@@ -722,8 +722,8 @@ footer li:last-child {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .modal-close-icon,
-.modal-close:focus .modal-close-icon {
+.modal-close:hover .modal-close__icon,
+.modal-close:focus .modal-close__icon {
   fill: var(--highlight-color);
 }
 
@@ -734,7 +734,7 @@ footer li:last-child {
   padding: 40px;
 }
 
-.modal-form-p {
+.modal-form__text {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -753,7 +753,7 @@ footer li:last-child {
   margin-bottom: 10px;
 }
 
-.form-field + .last {
+.form-field--end-indent {
   margin-bottom: 20px;
 }
 
@@ -796,27 +796,27 @@ footer li:last-child {
   resize: none;
 }
 
-.icon-group-border:focus {
+.modal-group--border:focus {
   border: 1px solid var(--highlight-color);
 }
 
-.icon-group-border:focus + .form-field-icon {
+.modal-group--border:focus + .form-field__icon {
   fill: var(--highlight-color);
 }
 
-.icon-group-border,
-.form-field-icon {
+.modal-group--border,
+.form-field__icon {
   transition-property: fill, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-group {
+.modal-group {
   width: 100%;
   position: relative;
 }
 
-.form-field-icon {
+.form-field__icon {
   width: 18px;
   height: 18px;
   position: absolute;
@@ -825,7 +825,7 @@ footer li:last-child {
   transform: translate(12px, -50%);
 }
 
-.checkbox {
+.policy__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -836,7 +836,7 @@ footer li:last-child {
   overflow: hidden;
 }
 
-.checkbox-icon {
+.policy__checkbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -851,7 +851,7 @@ footer li:last-child {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked + .checkbox-icon {
+.policy__checkbox:checked + .policy__checkbox-icon {
   border: 2px solid var(--highlight-color);
   background-color: var(--highlight-color);
   background-image: url(../images/check.svg);
@@ -869,7 +869,7 @@ footer li:last-child {
   margin-bottom: 30px;
 }
 
-.policy-link {
+.policy__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
