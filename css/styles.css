@@ -59,10 +59,10 @@ p {
   margin: 0;
 }
 
-.link {
+/* .link {
   text-decoration: none;
   color: inherit;
-}
+} */
 
 img {
   display: block;
@@ -124,13 +124,13 @@ header {
   display: flex;
 }
 
-.navigation-list .current {
+.navigation-list .navigation-list__text--current {
   position: relative;
 
   color: var(--highlight-color);
 }
 
-.current::after {
+.navigation-list__text--current::after {
   position: absolute;
   bottom: -1px;
   width: 100%;
@@ -287,7 +287,7 @@ li {
 }
 
 .activity__head,
-.our-team-head,
+.our-team__head,
 .regular-customers-head {
   text-align: center;
   font-size: 36px;
@@ -351,7 +351,7 @@ li {
 }
 
 .about__p-text,
-.our-team-p-text {
+.card-text__p {
   color: var(--link-p-text-color);
 }
 
@@ -417,14 +417,14 @@ li {
   padding: 30px 32px;
 }
 
-.card-text .our-team-card-head {
+.card-text__head {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
   text-align: center;
 }
 
-.card-text .our-team-p-text {
+.card-text__p {
   font-size: 16px;
   margin-bottom: 16px;
   text-align: center;
