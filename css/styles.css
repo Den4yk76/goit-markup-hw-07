@@ -197,8 +197,8 @@ header {
 
 .contacts-list__text,
 .footer-contacts-text,
-.about-h-text,
-.about-p-text,
+.about__h-text,
+.about__p-text,
 .hero__button {
   font-size: 14px;
 }
@@ -310,8 +310,9 @@ li {
   margin-right: 0px;
 }
 
-.about-h-text {
+.about__h-text {
   font-weight: 700;
+  line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
   color: var(--main-text-color);
@@ -344,12 +345,12 @@ li {
   background-image: url(../images/astronaut.svg);
 }
 
-.about-p-text {
+.about__p-text {
   font-weight: normal;
   line-height: 1.71;
 }
 
-.about-p-text,
+.about__p-text,
 .our-team-p-text {
   color: var(--link-p-text-color);
 }
