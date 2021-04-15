@@ -286,7 +286,7 @@ li {
   letter-spacing: 0.03em;
 }
 
-.activity-head,
+.activity__head,
 .our-team-head,
 .regular-customers-head {
   text-align: center;
@@ -359,23 +359,19 @@ li {
   padding-bottom: 94px;
 }
 
-.img-list {
+.activity__list {
   display: flex;
 }
 
-.img-list > li {
+.activity__list > li:not(:last-child) {
   margin-right: 30px;
-}
-
-.img-list li:last-child {
-  margin-right: 0px;
 }
 
 .img-card {
   position: relative;
 }
 
-.img-thumb {
+.img-card__thumb {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -386,7 +382,7 @@ li {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.img-thumb > h3 {
+.img-card__thumb-head {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
