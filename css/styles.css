@@ -199,7 +199,7 @@ header {
 .footer-contacts-text,
 .about-h-text,
 .about-p-text,
-.hero-button {
+.hero__button {
   font-size: 14px;
 }
 
@@ -233,7 +233,7 @@ header {
   text-align: center;
 }
 
-.hero-text {
+.hero__text {
   font-size: 44px;
   font-weight: 900;
   text-transform: uppercase;
@@ -247,7 +247,7 @@ button {
   cursor: pointer;
 }
 
-.hero-button {
+.hero__button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.875;
