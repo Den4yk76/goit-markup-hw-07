@@ -15,14 +15,14 @@
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
-}
 
-.about-list li {
-  margin-right: 30px;
-}
+  li {
+    margin-right: 30px;
 
-.about-list li:last-child {
-  margin-right: 0px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
 }
 
 .about__h-text {
@@ -32,6 +32,13 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   color: var(--main-text-color);
+}
+
+.about__p-text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.71;
+  color: var(--link-p-text-color);
 }
 
 .thumb::before {
@@ -59,11 +66,4 @@
 
 .icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
-}
-
-.about__p-text {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.71;
-  color: var(--link-p-text-color);
 }
