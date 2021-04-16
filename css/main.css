@@ -98,11 +98,11 @@ button {
   padding: 24px 0 25px 0;
 }
 
-.logo--dark-color {
+.logo .logo--dark-color {
   color: var(--logo-dark-color);
 }
 
-.logo--light-color {
+.logo .logo--light-color {
   color: var(--logo-light-color);
 }
 
@@ -117,6 +117,25 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.navigation-list__text {
+  display: inline-block;
+  padding: 32px 0 32px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-text-color);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list__text:hover, .navigation-list__text:focus {
+  color: var(--highlight-color);
+  fill: var(--highlight-color);
 }
 
 .navigation-list__text--current {
@@ -137,12 +156,6 @@ button {
   background-position: bottom;
 }
 
-.navigation-list__text:hover,
-.navigation-list__text:focus {
-  color: var(--highlight-color);
-  fill: var(--highlight-color);
-}
-
 .navigation-list__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -155,6 +168,10 @@ button {
 
 .contacts-list {
   margin-left: auto;
+  letter-spacing: 0.02em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contacts-list__item {
@@ -163,20 +180,6 @@ button {
 
 .contacts-list__item:last-child {
   margin-right: 0px;
-}
-
-.navigation-list__text {
-  display: inline-block;
-  padding: 32px 0 32px 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--main-text-color);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts {
@@ -189,14 +192,9 @@ button {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts:hover,
-.contacts:focus {
+.contacts:hover, .contacts:focus {
   color: var(--highlight-color);
   fill: var(--highlight-color);
-}
-
-.contacts-list__text {
-  font-size: 14px;
 }
 
 .contacts-list__text {
@@ -207,14 +205,8 @@ button {
       -ms-flex-align: center;
           align-items: center;
   padding: 32px 0 32px 0;
+  font-size: 14px;
   font-weight: 500;
-}
-
-.contacts-list {
-  letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 header {

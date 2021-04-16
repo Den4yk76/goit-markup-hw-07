@@ -9,11 +9,11 @@
   margin-right: 93px;
   padding: 24px 0 25px 0;
 
-  &--dark-color {
+  .logo--dark-color {
     color: var(--logo-dark-color);
   }
 
-  &--light-color {
+  .logo--light-color {
     color: var(--logo-light-color);
   }
 }
