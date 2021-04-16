@@ -8,12 +8,12 @@
 
   margin-right: 93px;
   padding: 24px 0 25px 0;
-}
 
-.logo--dark-color {
-  color: var(--logo-dark-color);
-}
+  &--dark-color {
+    color: var(--logo-dark-color);
+  }
 
-.logo--light-color {
-  color: var(--logo-light-color);
+  &--light-color {
+    color: var(--logo-light-color);
+  }
 }
