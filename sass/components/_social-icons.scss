@@ -14,12 +14,12 @@
   transition-property: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.social-icons__link:hover,
-.social-icons__link:focus {
-  background-color: var(--highlight-color);
-  fill: #fff;
+  &:hover,
+  &:focus {
+    background-color: var(--highlight-color);
+    fill: #fff;
+  }
 }
 
 .social-icons__item:not(:last-child) {
