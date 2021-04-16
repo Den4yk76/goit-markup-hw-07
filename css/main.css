@@ -522,8 +522,7 @@ header {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client a:hover,
-.client a:focus {
+.client a:hover, .client a:focus {
   fill: var(--highlight-color);
   border-color: var(--highlight-color);
 }
