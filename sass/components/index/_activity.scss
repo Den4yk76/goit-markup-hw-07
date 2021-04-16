@@ -13,10 +13,10 @@
 
 .activity__list {
   display: flex;
-}
 
-.activity__list > li:not(:last-child) {
-  margin-right: 30px;
+  > li:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .img-card {
