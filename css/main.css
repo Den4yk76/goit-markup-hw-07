@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --first-logo-color: #2196f3;
   --logo-dark-color: #000000;
@@ -756,6 +755,11 @@ footer li:last-child {
           justify-content: center;
 }
 
+.modal-close:hover .modal-close__icon,
+.modal-close:focus .modal-close__icon {
+  fill: var(--highlight-color);
+}
+
 .modal-close__icon {
   width: 11px;
   height: 11px;
@@ -767,11 +771,6 @@ footer li:last-child {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .modal-close__icon,
-.modal-close:focus .modal-close__icon {
-  fill: var(--highlight-color);
-}
-
 .modal-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,8 +779,26 @@ footer li:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* outline: 1px solid tomato; */
   padding: 40px;
+}
+
+.modal-form button {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px 55px;
+  background-color: var(--highlight-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--back-light-color);
 }
 
 .modal-form__text {
@@ -804,12 +821,7 @@ footer li:last-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* border: 1px solid blue; */
   margin-bottom: 10px;
-}
-
-.form-field--end-indent {
-  margin-bottom: 20px;
 }
 
 .form-field label {
@@ -828,14 +840,22 @@ footer li:last-child {
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 40px;
-  /* регулирую отступ от края инпута что б не перекрывать текст иконкой*/
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-field--end-indent {
+  margin-bottom: 20px;
 }
 
 .form-field__textarea {
   height: 120px;
   padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
 }
 
 .form-field__textarea::-webkit-input-placeholder {
@@ -878,12 +898,18 @@ footer li:last-child {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field__textarea {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
+.modal-group {
+  width: 100%;
+  position: relative;
+}
+
+.modal-group--border {
+  -webkit-transition-property: fill, border;
+  transition-property: fill, border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-group--border:focus {
@@ -894,21 +920,6 @@ footer li:last-child {
   fill: var(--highlight-color);
 }
 
-.modal-group--border,
-.form-field__icon {
-  -webkit-transition-property: fill, border;
-  transition-property: fill, border;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-group {
-  width: 100%;
-  position: relative;
-}
-
 .form-field__icon {
   width: 18px;
   height: 18px;
@@ -917,6 +928,26 @@ footer li:last-child {
   left: 0;
   -webkit-transform: translate(12px, -50%);
           transform: translate(12px, -50%);
+  -webkit-transition-property: fill, border;
+  transition-property: fill, border;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--link-p-text-color);
+  margin-bottom: 30px;
 }
 
 .policy__checkbox {
@@ -928,6 +959,14 @@ footer li:last-child {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.policy__checkbox:checked + .policy__checkbox-icon {
+  border: 2px solid var(--highlight-color);
+  background-color: var(--highlight-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .policy__checkbox-icon {
@@ -945,53 +984,12 @@ footer li:last-child {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy__checkbox:checked + .policy__checkbox-icon {
-  border: 2px solid var(--highlight-color);
-  background-color: var(--highlight-color);
-  background-image: url(../images/check.svg);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.policy {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--link-p-text-color);
-  margin-bottom: 30px;
-}
-
 .policy__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--highlight-color);
   text-decoration: underline;
-}
-
-.modal-form button {
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 10px 55px;
-  background-color: var(--highlight-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: transparent;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: var(--back-light-color);
 }
 
 .projects {
