@@ -5,12 +5,11 @@
 .navigation-list {
   letter-spacing: 0.02em;
   display: flex;
-}
 
-.navigation-list .navigation-list__text--current {
-  position: relative;
-
-  color: var(--highlight-color);
+    &__text--current {
+      position: relative;
+      color: var(--highlight-color);
+    }
 }
 
 .navigation-list__text--current::after {
@@ -27,12 +26,14 @@
   background-position: bottom;
 }
 
-.navigation-list__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .navigation-list__text:hover,
 .navigation-list__text:focus {
   color: var(--highlight-color);
   fill: var(--highlight-color);
 }
+
+.navigation-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+
